@@ -1,0 +1,25 @@
+{
+  "name": "gemini-ppp",
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Run Gemini prompts in parallel, grouped by file path from any command output.",
+  "bin": {
+    "gemini-ppp": "dist/index.js"
+  },
+  "files": ["dist"],
+  "scripts": {
+    "build": "rolldown -c rolldown.config.ts"
+  },
+  "keywords": ["gemini", "llm", "parallel", "cli"],
+  "author": "baseballyama",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/baseballyama/llm-parallel-per-path",
+    "directory": "packages/gemini-ppp"
+  },
+  "devDependencies": {
+    "@llm-ppp/shared": "workspace:*",
+    "rolldown": "1.0.0-beta.52"
+  }
+}

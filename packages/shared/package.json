@@ -1,0 +1,10 @@
+{
+  "name": "@llm-ppp/shared",
+  "version": "0.1.0",
+  "type": "module",
+  "private": true,
+  "exports": {
+    "./chunker": "./src/chunker.ts",
+    "./runner": "./src/runner.ts"
+  }
+}

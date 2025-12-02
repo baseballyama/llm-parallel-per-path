@@ -1,8 +1,7 @@
-import { runMain, buildContextPrefix, type ProviderConfig } from "./lib/runner.ts";
-import type { Chunk } from "./lib/chunker.ts";
+import { runMain, buildContextPrefix, type ProviderConfig, type Chunk } from "@llm-ppp/shared/runner";
 
 const config: ProviderConfig = {
-  name: "claudeppp",
+  name: "claude-ppp",
   command: "claude",
   buildArgs: (chunk: Chunk, commandArgs: string[]) => {
     const args = [...commandArgs];
@@ -18,15 +17,15 @@ const config: ProviderConfig = {
 
     return args;
   },
-  helpText: `Usage: claudeppp [claude-options] "<prompt>"
+  helpText: `Usage: claude-ppp [claude-options] "<prompt>"
 
-claudeppp accepts all claude command options. Additional options:
+claude-ppp accepts all claude command options. Additional options:
   -c, --concurrency <n>  Number of parallel LLM calls (default: CPU cores)
 
 Example:
-  eslint . | claudeppp "Fix these errors"
-  eslint . | claudeppp --dangerously-skip-permissions "Fix these errors"
-  eslint . | claudeppp -c 4 --model claude-sonnet-4-20250514 "Fix these errors"`,
+  eslint . | claude-ppp "Fix these errors"
+  eslint . | claude-ppp --dangerously-skip-permissions "Fix these errors"
+  eslint . | claude-ppp -c 4 --model claude-sonnet-4-20250514 "Fix these errors"`,
 };
 
 runMain(config).catch((error: unknown) => {

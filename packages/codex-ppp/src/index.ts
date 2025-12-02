@@ -1,9 +1,8 @@
-import { runMain, buildContextPrefix, type ProviderConfig } from "./lib/runner.ts";
-import type { Chunk } from "./lib/chunker.ts";
+import { runMain, buildContextPrefix, type ProviderConfig, type Chunk } from "@llm-ppp/shared/runner";
 
 const config: ProviderConfig = {
-  name: "geminippp",
-  command: "gemini",
+  name: "codex-ppp",
+  command: "codex",
   buildArgs: (chunk: Chunk, commandArgs: string[]) => {
     const args = [...commandArgs];
     const lastArg = args[args.length - 1];
@@ -14,14 +13,14 @@ const config: ProviderConfig = {
 
     return args;
   },
-  helpText: `Usage: geminippp [gemini-options] "<prompt>"
+  helpText: `Usage: codex-ppp [codex-options] "<prompt>"
 
-geminippp accepts all gemini command options. Additional options:
+codex-ppp accepts all codex command options. Additional options:
   -c, --concurrency <n>  Number of parallel LLM calls (default: CPU cores)
 
 Example:
-  eslint . | geminippp "Fix these errors"
-  eslint . | geminippp -c 4 "Fix these errors"`,
+  eslint . | codex-ppp "Fix these errors"
+  eslint . | codex-ppp -c 4 "Fix these errors"`,
 };
 
 runMain(config).catch((error: unknown) => {

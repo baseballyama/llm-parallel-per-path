@@ -1,36 +1,18 @@
 {
   "name": "llm-parallel-per-path",
   "version": "0.1.0",
+  "private": true,
   "type": "module",
   "description": "Run LLM prompts in parallel, grouped by file path from any command output.",
-  "bin": {
-    "claudeppp": "dist/claudeppp.js",
-    "geminippp": "dist/geminippp.js",
-    "codexppp": "dist/codexppp.js",
-    "chunker": "dist/chunker.js"
-  },
-  "files": [
-    "dist"
-  ],
   "scripts": {
     "typecheck": "tsgo --noEmit",
     "format": "oxfmt",
     "lint": "oxlint",
     "lint:fix": "oxlint --fix",
-    "build": "rolldown -c rolldown.config.ts",
+    "build": "pnpm -r build",
     "test": "vitest run",
     "check:all": "pnpm run typecheck && pnpm run format && pnpm run lint && pnpm run build && pnpm run test"
   },
-  "keywords": [
-    "llm",
-    "parallel",
-    "per-path",
-    "command",
-    "output",
-    "grouped",
-    "file",
-    "path"
-  ],
   "author": "baseballyama",
   "license": "MIT",
   "packageManager": "pnpm@10.24.0",

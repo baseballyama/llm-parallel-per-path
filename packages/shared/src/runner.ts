@@ -196,3 +196,5 @@ export async function runMain(config: ProviderConfig): Promise<void> {
     config.buildArgs(chunk, options.commandArgs),
   );
 }
+
+export type { Chunk } from "./chunker.ts";

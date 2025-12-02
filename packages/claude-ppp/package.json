@@ -1,0 +1,25 @@
+{
+  "name": "claude-ppp",
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Run Claude prompts in parallel, grouped by file path from any command output.",
+  "bin": {
+    "claude-ppp": "dist/index.js"
+  },
+  "files": ["dist"],
+  "scripts": {
+    "build": "rolldown -c rolldown.config.ts"
+  },
+  "keywords": ["claude", "llm", "parallel", "cli"],
+  "author": "baseballyama",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/baseballyama/llm-parallel-per-path",
+    "directory": "packages/claude-ppp"
+  },
+  "devDependencies": {
+    "@llm-ppp/shared": "workspace:*",
+    "rolldown": "1.0.0-beta.52"
+  }
+}

@@ -33,6 +33,35 @@ importers:
         specifier: ^4.0.14
         version: 4.0.14(@types/node@24.10.1)
 
+  packages/claude-ppp:
+    devDependencies:
+      '@llm-ppp/shared':
+        specifier: workspace:*
+        version: link:../shared
+      rolldown:
+        specifier: 1.0.0-beta.52
+        version: 1.0.0-beta.52
+
+  packages/codex-ppp:
+    devDependencies:
+      '@llm-ppp/shared':
+        specifier: workspace:*
+        version: link:../shared
+      rolldown:
+        specifier: 1.0.0-beta.52
+        version: 1.0.0-beta.52
+
+  packages/gemini-ppp:
+    devDependencies:
+      '@llm-ppp/shared':
+        specifier: workspace:*
+        version: link:../shared
+      rolldown:
+        specifier: 1.0.0-beta.52
+        version: 1.0.0-beta.52
+
+  packages/shared: {}
+
 packages:
 
   '@babel/runtime@7.28.4':
