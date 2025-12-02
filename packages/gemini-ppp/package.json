@@ -1,12 +1,14 @@
 {
   "name": "gemini-ppp",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "type": "module",
   "description": "Run Gemini prompts in parallel, grouped by file path from any command output.",
   "bin": {
     "gemini-ppp": "dist/index.js"
   },
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "typecheck": "tsgo --noEmit",
     "format": "oxfmt",
@@ -16,7 +18,12 @@
     "test": "vitest run --pass-with-no-tests",
     "check:all": "pnpm run typecheck && pnpm run format && pnpm run lint && pnpm run build && pnpm run test"
   },
-  "keywords": ["gemini", "llm", "parallel", "cli"],
+  "keywords": [
+    "gemini",
+    "llm",
+    "parallel",
+    "cli"
+  ],
   "author": "baseballyama",
   "license": "MIT",
   "repository": {
