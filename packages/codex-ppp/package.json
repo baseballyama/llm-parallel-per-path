@@ -1,6 +1,6 @@
 {
   "name": "codex-ppp",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "type": "module",
   "description": "Run Codex prompts in parallel, grouped by file path from any command output.",
   "bin": {
