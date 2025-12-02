@@ -3,6 +3,15 @@
   "version": "0.1.0",
   "type": "module",
   "private": true,
+  "scripts": {
+    "typecheck": "tsgo --noEmit",
+    "format": "oxfmt",
+    "lint": "oxlint",
+    "lint:fix": "oxlint --fix",
+    "build": "echo 'no build'",
+    "test": "vitest run",
+    "check:all": "pnpm run typecheck && pnpm run format && pnpm run lint && pnpm run build && pnpm run test"
+  },
   "exports": {
     "./chunker": "./src/chunker.ts",
     "./runner": "./src/runner.ts"

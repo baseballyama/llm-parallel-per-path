@@ -1,4 +1,9 @@
-import { runMain, buildContextPrefix, type ProviderConfig, type Chunk } from "@llm-ppp/shared/runner";
+import {
+  runMain,
+  buildContextPrefix,
+  type ProviderConfig,
+  type Chunk,
+} from "@llm-ppp/shared/runner";
 
 const config: ProviderConfig = {
   name: "claude-ppp",

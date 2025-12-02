@@ -5,13 +5,13 @@
   "type": "module",
   "description": "Run LLM prompts in parallel, grouped by file path from any command output.",
   "scripts": {
-    "typecheck": "tsgo --noEmit",
-    "format": "oxfmt",
-    "lint": "oxlint",
-    "lint:fix": "oxlint --fix",
-    "build": "pnpm -r build",
-    "test": "vitest run",
-    "check:all": "pnpm run typecheck && pnpm run format && pnpm run lint && pnpm run build && pnpm run test"
+    "typecheck": "pnpm -r --no-bail run typecheck",
+    "format": "pnpm -r --no-bail run format",
+    "lint": "pnpm -r --no-bail run lint",
+    "lint:fix": "pnpm -r --no-bail run lint:fix",
+    "build": "pnpm -r --no-bail run build",
+    "test": "pnpm -r --no-bail run test",
+    "check:all": "pnpm -r --no-bail run check:all"
   },
   "author": "baseballyama",
   "license": "MIT",
