@@ -1,6 +1,6 @@
 {
   "name": "gemini-ppp",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "type": "module",
   "description": "Run Gemini prompts in parallel, grouped by file path from any command output.",
   "bin": {

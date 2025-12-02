@@ -1,5 +1,11 @@
 # claude-ppp
 
+## 0.2.2
+
+### Patch Changes
+
+- b174827: chore: fix release process
+
 ## 0.2.1
 
 ### Patch Changes
