@@ -34,7 +34,7 @@ const BOLD = "\x1b[1m";
 function cleanOutput(str: string): string {
   return (
     str
-      // Remove control characters (except \x1b for ANSI codes)
+      // oxlint-disable-next-line no-control-regex -- Remove control characters (except \x1b for ANSI codes)
       .replace(/[\x00-\x08\x0B-\x1A\x1C-\x1F]/g, "")
       // Remove ^D (literal string from script command)
       .replace(/\^D/g, "")
