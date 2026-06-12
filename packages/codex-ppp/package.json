@@ -34,6 +34,6 @@
   },
   "devDependencies": {
     "@llm-ppp/shared": "workspace:*",
-    "rolldown": "1.0.0-beta.52"
+    "rolldown": "1.1.1"
   }
 }
